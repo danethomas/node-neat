@@ -1,11 +1,9 @@
 var path = require('path');
 var bourbon = require('node-bourbon');
-
-var neatEntryPoint = require.resolve('bourbon-neat');
-var neatDir = path.dirname(neatEntryPoint);
+var neat = require('bourbon-neat')
 
 function includePaths() {
-  return bourbon.with(neatDir);
+  return bourbon.with(neat.includePaths);
 }
 
 module.exports = {
